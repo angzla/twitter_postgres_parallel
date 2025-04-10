@@ -15,7 +15,7 @@ echo 'load pg_normalized'
 echo '================================================================================'
 time for file in $files; do
     echo
-    python3 load_tweets.py --db=postgresql://postgres:pass@localhost:4014 "--inputs $file"
+    python3 load_tweets.py --db "postgresql://postgres:pass@localhost:4014" --inputs "$file"
 done
 
 echo '================================================================================'
