@@ -14,12 +14,11 @@ echo 'load pg_normalized'
 echo '================================================================================'
 time for file in $files; do
     python3 load_tweets.py --db "postgresql://postgres:pass@localhost:4014" --inputs "$file"
-    # copy your solution to the twitter_postgres assignment here
 done
 
 echo '================================================================================'
 echo 'load pg_normalized_batch'
 echo '================================================================================'
 time for file in $files; do
-    python3 -u load_tweets_batch.py --db=postgresql://postgres:pass@localhost:3/ --inputs $file
+    python3 -u load_tweets_batch.py --db=postgresql://postgres:pass@localhost:4015/ --inputs $file
 done
